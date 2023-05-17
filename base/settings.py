@@ -158,6 +158,7 @@ ACCOUNT_LOGOUT_REDIRECT_URL = 'home'
 ACCOUNT_UNIQUE_EMAIL = True
 
 if DEBUG:
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
     # Turn on WhiteNoise storage backend that takes care of compressing static files
